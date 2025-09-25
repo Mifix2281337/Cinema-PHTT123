@@ -8,8 +8,6 @@
 html {
     font-size: 16px;
 }
-
-
 body {
     background-color: #621402;
     color: white;
@@ -25,6 +23,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+hr {
+    width: 1018px;
 }
 
 /* Настройка header */
@@ -113,7 +115,7 @@ header {
     padding-bottom: 20px;
 }
 
-.date.active {
+.date.active, .date:hover  {
     background-color: orange;
     color: #621402;
 }
@@ -133,6 +135,7 @@ header {
     transition: background-color 0.3s;
     cursor: pointer;
 }
+
 .date-class {
     display: flex;
     flex-direction: column;
@@ -180,4 +183,56 @@ option {
 }
 #date-time select {
     width: 108px;
+}
+
+/* Настройка main */
+.main-class {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(98, 20, 2, 0.9)), no-repeat center;
+    margin-bottom: 50px;
+}
+
+.main-class path:not(.light) {
+    fill: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.main-class path:not(.light):hover {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.main-class path.booked, .main-class path.booked:hover {
+    fill: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+}
+
+.scheme path.activ, .scheme path.activ:hover {
+    fill: orange;
+}
+
+.price-conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-pay {
+    background-color: #FE8E05;
+    color: white;
+    text-decoration: none;
+    padding: 24px 52px;
+    border-radius: 10px;
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+.price-total {
+    font-size: larger;
 }
