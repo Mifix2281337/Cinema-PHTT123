@@ -32,7 +32,7 @@ hr {
 /* Настройка header */
 
 header {
-   background: linear-gradient(to top, rgba(98, 20, 2, 0.9), transparent), url("/image/bg.jpg"), no-repeat center;
+   background: linear-gradient(to top, rgba(98, 20, 2, 0.9), transparent), url("bg.jpg"), no-repeat center;
     background-size: cover;
     display: flex;
     justify-content: center;
