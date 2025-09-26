@@ -31,6 +31,16 @@ hr {
     width: 1018px;
 }
 
+iframe {
+    width: 100%;
+    height: 500px;
+    display: none;
+}
+
+.diraction {
+    display: block;
+}
+
 /* Настройка header */
 
 header {
@@ -276,20 +286,22 @@ option {
         width: auto;
     }
 
-
     .date {
         font-size: 1.25vw;
     }
 
-    .title img {
-        width: 50%;
-    }
     .time {
         width: auto;
     }
 
     select {
         font-size: 1.25vw;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
     }
 
 }
@@ -306,5 +318,9 @@ option {
 
     .price-conteiner {
         margin: 20px;
+    }
+
+    header {
+        padding: 30px;
     }
 }
