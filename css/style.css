@@ -7,11 +7,13 @@
 
 html {
     font-size: 16px;
+    z-index: 0;
 }
 body {
     background-color: #621402;
     color: white;
     font-family: Calibri;
+    
 }
 
 h2 {
@@ -32,12 +34,15 @@ hr {
 /* Настройка header */
 
 header {
-   background: linear-gradient(to top, rgba(98, 20, 2, 0.9), transparent), url("bg.jpg"), no-repeat center;
+   background: linear-gradient(to top, rgba(98, 20, 2, 0.9), transparent), url("bg.jpg"), no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
-    background-position: absolute;
-    padding: 50px;
+    
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    
 }
 .main-div {
     width: 1170px;
@@ -83,9 +88,9 @@ header {
 }
 
 .title {
-    font-size: 16px;
     margin-bottom: 50px;
     margin-top: 20px;
+    width: 100%;
 }
 .title p {
     width: 570px;
@@ -113,6 +118,7 @@ header {
     border-bottom: 1px solid white ;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .date.active, .date:hover  {
@@ -191,8 +197,9 @@ option {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top, rgba(98, 20, 2, 0.9)), no-repeat center;
+    background: linear-gradient(to top, rgba(98, 20, 2, 0.9)), no-repeat cover;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 .main-class path:not(.light) {
@@ -235,4 +242,69 @@ option {
 
 .price-total {
     font-size: larger;
+}
+
+.scheme-svg {
+    width: 100%;
+}
+
+/* Адаптивная верстка */
+
+@media (max-width: 1030px) {
+
+    header {
+        font-size: 2vw;
+    }
+
+    #cinema select {
+        width: 100%;
+        margin-right: 10px;
+    }
+    #date-time select {
+        width: 100%;
+    }
+
+    .right {
+        width: auto;
+    }
+
+    .title p {
+        width: 50%;
+    }
+
+    .date-class {
+        width: auto;
+    }
+
+
+    .date {
+        font-size: 1.25vw;
+    }
+
+    .title img {
+        width: 50%;
+    }
+    .time {
+        width: auto;
+    }
+
+    select {
+        font-size: 1.25vw;
+    }
+
+}
+
+@media (max-width: 780px) {
+
+    .date-class {
+        width: 50%;
+    }
+
+    .select-div {
+        width: 50%
+    }
+
+    .price-conteiner {
+        margin: 20px;
+    }
 }
